@@ -1,10 +1,9 @@
-include("../src/GraphFilters.jl")
-include("../src/GraphIO.jl")
-include("../src/GraphPlot.jl")
+using SpectralGraphWavelet
 
-base_dir = joinpath(@__DIR__, "..", "..", "python", "sgwt", "library", "data")
-path_L = joinpath(base_dir, "DELAY", "USA_DELAY.mat")
-path_S = joinpath(base_dir, "SIGNALS", "usa_coords.mat")
+script_dir = dirname(@__FILE__)
+
+path_L = joinpath(script_dir, "USA_DELAY.mat")
+path_S = joinpath(script_dir, "usa_coords.mat")
 
 A = load_laplacian(path_L)
 S = load_signal(path_S)
