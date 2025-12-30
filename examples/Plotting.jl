@@ -52,8 +52,9 @@ b = impulse(A, 60000)
 
 results_bp = bandpass(conv, b)[1]
 
+println("Attempting Plot")
+
 f_vals = results_bp 
 plot_signal(f_vals, S)
 
-println("Press Enter to exit...")
-readline()
+println("Plotted!")
