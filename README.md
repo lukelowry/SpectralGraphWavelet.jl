@@ -1,7 +1,6 @@
 # SpectralGraphWavelet
 
 [![Build Status](https://github.com/lukelowry/SpectralGraphWavelet.jl/actions/workflows/CI.yml/badge.svg?branch=master)](https://github.com/lukelowry/SpectralGraphWavelet.jl/actions/workflows/CI.yml?query=branch%3Amaster)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Julia](https://img.shields.io/badge/julia-v1.10+-blue.svg)](https://julialang.org)
 
 # Sparse GSP & SGWT Tools
