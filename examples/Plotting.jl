@@ -31,10 +31,11 @@ function plot_signal(f::AbstractVecOrMat, S::AbstractMatrix; cmap=nothing)
         aspect_ratio = :equal,
         grid = false,
         title = "Signal Response",
-        colorbar_ticks = nothing  # Removes the numeric labels from the colorbar
+        colorbar_ticks = nothing,  # Removes the numeric labels from the colorbar
+        dpi = 400
     )
 
-    display(p)
+    savefig(raw"C:\Users\wyattluke.lowery\Documents\GitHub\SpectralGraphWavelet.jl\examples\USA_Wavelet_julia.png")
     return p
 end
 
@@ -46,11 +47,15 @@ path_S = joinpath(script_dir, "usa_coords.mat")
 A = load_laplacian(path_L)
 S = load_signal(path_S)
 
-scale = 1
+scale = 10
 conv = DyConvolve(A, [1/scale]) # pass poles (1/s)
-b = impulse(A, 60000) 
+b = impulse(A, 25000) 
 
-results_bp = bandpass(conv, b)[1]
+c = bandpass(conv, b)[1]
+c = bandpass(conv, c)[1]
+c = bandpass(conv, c)[1]
+c = bandpass(conv, c)[1]
+results_bp = bandpass(conv, c)[1]
 
 println("Attempting Plot")
 

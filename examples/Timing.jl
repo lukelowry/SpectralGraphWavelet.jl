@@ -9,7 +9,7 @@ A = load_laplacian(path_L)
 S = load_signal(path_S)
 
 
-scales = 10 .^ range(-5, 2, length=20)
+scales = 10 .^ range(-5, 2, length=25)
 poles = 1 ./scales
 
 conv = DyConvolve(A, poles)
@@ -23,10 +23,6 @@ bandpass(conv, b)
 
 println("Benchmarking...")
 
-@time begin
-    for i in 1:2
-        global results_bp = bandpass(conv, b)
-    end
-end
+@time results_bp = bandpass(conv, b)
 
 println("Done!")
