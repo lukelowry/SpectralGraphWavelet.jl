@@ -1,4 +1,5 @@
 /Manifest*.toml
+/$tmp/
 /examples/out/
 /examples/*.png
 /examples/Manifest.toml
