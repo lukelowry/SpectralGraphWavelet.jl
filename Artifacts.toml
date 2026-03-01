@@ -1,7 +1,7 @@
 [sgwt_library]
-git-tree-sha1 = "3e1b151196f5d97d58070e2cb47c09a32aa01982"
+git-tree-sha1 = "e22a7e2ec90404dea3139918fe2d5dd3c1ab99ba"
 lazy = true
 
     [[sgwt_library.download]]
-    url = "https://raw.githubusercontent.com/lukelowry/SpectralGraphWavelet.jl/master/artifacts/sgwt_library-v1.tar.gz"
+    url = "https://raw.githubusercontent.com/lukelowry/SpectralGraphWavelet.jl/4cd923384b331bff80424a6b0d81f293ccefe7a2/artifacts/sgwt_library-v1.tar.gz"
     sha256 = "fe6ce993103ef2e0a5dc92c5e353d9676703aa33a09a213532a1db0259d5b418"
