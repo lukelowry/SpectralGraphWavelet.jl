@@ -29,14 +29,14 @@ Pkg.activate(; temp=true)
 Pkg.develop(path=pwd())
 Pkg.add("Aqua")
 using Aqua, SpectralGraphWavelet
-Aqua.test_all(SpectralGraphWavelet)
+Aqua.test_all(SpectralGraphWavelet; persistent_tasks=false)
 '@ | julia -
 ```
 
 Build docs locally:
 
 ```powershell
-julia --project=docs -e "using Pkg; Pkg.instantiate()"
+julia --project=docs -e "using Pkg; Pkg.develop(PackageSpec(path=pwd())); Pkg.instantiate()"
 julia --project=docs docs/make.jl
 ```
 

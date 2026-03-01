@@ -14,7 +14,11 @@ makedocs(
     sitename="SpectralGraphWavelet.jl",
     format=Documenter.HTML(prettyurls=get(ENV, "CI", "false") == "true"),
     pages=[
-        "Home" => "index.md",
+        "Overview" => "index.md",
+        "Usage" => "usage.md",
+        "Library" => "library.md",
+        "API Reference" => "api.md",
+        "Related Projects" => "related.md",
     ],
 )
 

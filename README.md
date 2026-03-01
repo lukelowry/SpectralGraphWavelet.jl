@@ -2,6 +2,12 @@
 
 Julia port of the `sgwt` package for sparse spectral graph wavelets and graph convolution, using native Julia `SuiteSparse` (no DLL wrappers required).
 
+Ground-truth references:
+
+- Python `sgwt` repository: <https://github.com/lukelowry/sgwt>
+- Python docs: <https://sgwt.readthedocs.io/>
+- Research website: <https://lukelowry.github.io/>
+
 ## Scope
 
 This package mirrors the Python `sgwt` module surface for:
@@ -24,7 +30,7 @@ Pkg.add("SpectralGraphWavelet")
 
 This repository uses the standard Julia `Documenter.jl` workflow.
 
-- Source: `docs/src/index.md`
+- Source: `docs/src/`
 - Builder: `docs/make.jl`
 - CI workflow: `.github/workflows/Documentation.yml`
 
@@ -33,6 +39,7 @@ Build docs locally:
 ```julia
 using Pkg
 Pkg.activate("docs")
+Pkg.develop(PackageSpec(path=pwd()))
 Pkg.instantiate()
 include("docs/make.jl")
 ```
